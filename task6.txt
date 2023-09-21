@@ -1,0 +1,113 @@
+CREATE DATABASE task6;
+
+
+
+
+
+
+CREATE TABLE student 
+(id int PRIMARY KEY AUTO_INCREMENT,
+ first_name varchar (20),
+ last_name varchar (20) ,
+ national_id varchar (20) UNIQUE,
+ subject text NOT NULL ,
+ age int CHECK (age > 18) ,
+ grade int ,
+ status_student varchar (20) DEFAULT 'new'
+ )
+
+
+
+
+ 
+
+
+
+INSERT INTO `student`( `first_name`, `last_name`, `national_id`, `subject`, `age`, `grade`) 
+VALUES 
+ ('loay','mohamed','1000','science','20','60'),
+('sama','mohamed','2000','science','22','90'),
+('kholoud','mohamed','3000','math','25','80'),
+('mona','ali','10000','science','22','60'),
+('soha','mohamed','12000','math','25','80'),
+('said','mohamed','15000','science','22','70')
+('sama','mohamed','5000','science','22','70'),
+('noha','mohamed','4000','English','22','90'),
+('sama','mohamed','7000','science','22','90'),
+('sama','mohamed','600','Arabic','22','50')
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT `first_name` , `last_name`
+FROM `student` 
+WHERE age=20 
+
+
+
+
+
+SELECT  `first_name`FROM `student` 
+ORDER BY (`first_name`) ASC
+
+
+
+
+
+UPDATE `student` SET
+
+ `first_name`='hanaa'
+ 
+ WHERE id =3;
+
+
+
+
+
+
+DELETE FROM `student` WHERE `grade` < 30 AND grade =100
+
+
+
+
+
+
+ CREATE VIEW testview
+ AS
+ SELECT *
+ FROM student
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
